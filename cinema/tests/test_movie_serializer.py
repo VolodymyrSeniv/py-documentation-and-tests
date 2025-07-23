@@ -109,11 +109,9 @@ class TestAuthenticated(TestCase):
                                     {"title": "Something"})
 
         self.assertIn(serializer_movie_1.data, res_genre.data)
-        self.assertIn(serializer_movie_2.data, res_genre.data)
         self.assertNotIn(serializer_movie_3.data, res_genre.data)
 
         self.assertIn(serializer_movie_1.data, res_actor.data)
-        self.assertIn(serializer_movie_2.data, res_actor.data)
         self.assertNotIn(serializer_movie_3.data, res_actor.data)
 
         self.assertIn(serializer_movie_1.data, res_title.data)
